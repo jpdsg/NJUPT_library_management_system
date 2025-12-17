@@ -1,0 +1,2 @@
+# NJUPT_library_management_system
+njupt图书馆管理系统（qt实现
