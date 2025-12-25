@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>njupt.png</file>
+        <file>njupt_logo.png</file>
+    </qresource>
+</RCC>
