@@ -1,4 +1,4 @@
-# 📚 NJUPT Library Management System 
+# 📚 NJUPT_library_management_system 
 
 > 一个基于 Qt 5.14.2 (C++) 开发的桌面端图书馆管理系统，专为NJUPT课程设计打造。支持管理员与读者双角色登录，具备完整的图书借阅、归还、续借、预借及逾期管理功能。
 
