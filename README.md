@@ -1,2 +1,2 @@
 # NJUPT_library_management_system
-njupt图书馆管理系统（qt实现
+njupt图书馆管理系统（qt5.14.2
