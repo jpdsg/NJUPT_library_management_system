@@ -55,20 +55,27 @@
 
 ---
 
-## 📂 项目结构 (Structure)
 
-```text
-njupt_library_management/
-├── njupt_library_management.pro  # Qt 项目配置文件
-├── main.cpp                      # 程序入口 (处理登录循环逻辑)
-├── MainWindow.h/cpp              # 主窗口 (UI交互、业务功能调度)
-├── LoginDialog.h/cpp             # 登录/注册模块 (账号验证、文件读写)
-├── LibraryManager.h/cpp          # 核心业务控制器 (图书增删改查、借还算法)
-├── Book.h/cpp                    # 图书实体类 (数据模型、序列化)
-├── res.qrc                       # Qt 资源配置文件
-├── fig/                          # 图片资源文件夹 (logo, 背景图)
-├── books.txt                     # [自动生成] 图书数据存储文件
-└── users.txt                     # [自动生成] 用户账号存储文件
+## ⚠️ 注意事项 (Important Notes)
+
+1. **📦 数据文件路径**
+   若使用Qt Creator 中的 **Shadow Build** ，这会将可执行文件生成在源码目录之外的文件夹中。
+   **请务必执行以下操作**：编译完成后，将源码根目录下的 `books.txt` 和 `users.txt` 手动复制到生成的构建目录中（即 `.exe` 文件所在的文件夹）。否则程序启动后将无法读取数据，导致列表为空或无法登录。
+
+2. **🔣 字符编码问题**
+   本项目针对 Windows (MinGW) 环境进行了中文适配（代码中使用了 `Local8Bit` 处理）。
+   * 请保持源文件的编码格式不变。
+   * 如果在 Linux 或 macOS 下编译，可能需要调整 `strToQt` 和 `qtToStr` 函数中的编码转换逻辑（改为 `fromUtf8` / `toStdString`）。
+
+3. **🖼️ 资源文件更新**
+   项目使用 Qt 资源系统 (`res.qrc`) 管理图片。
+   * 若需要替换或添加了 `fig/` 目录下的图片，必须在 Qt Creator 中打开 `res.qrc` 更新文件列表，并右键项目选择 **"执行 qmake"**，否则新图片无法显示。
+
+4. **🔑 账号重置**
+   若忘记密码或数据损坏，可以直接删除 `users.txt` 文件。下次启动程序时，系统会自动重新生成默认的管理员账号 (`admin` / `123`)。
+
+---
+
 
 ## 🚀 快速开始 (Getting Started)
 
@@ -86,8 +93,6 @@ njupt_library_management/
 *   **Compiler**: MinGW 7.3.0 64-bit
 *   **OS**: Windows 10/11
 
-#### 编译步骤
-1. 克隆仓库：
-   ```bash
-   git clone https://github.com/你的用户名/njupt_library_management.git
-
+#### 编译步骤  
+1.clone repo or download zip  
+2.在 Qt Creator 中编译
