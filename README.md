@@ -96,3 +96,9 @@
 #### 编译步骤  
 1.clone repo or download zip  
 2.在 Qt Creator 中编译
+
+
+---
+
+
+## Suggestions are welcome!(´▽`ʃ♡ƪ)
