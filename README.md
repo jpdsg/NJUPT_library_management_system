@@ -36,7 +36,7 @@
 ## 🚀 快速开始 (Getting Started)
 
 ### 1. 下载发行版 (For Users)
-如果你只想运行程序，请直接前往 [Releases 页面](sha256:c4a247756ec69f98fccff429a2dd5e088db8fc91a8a789ca803cd20e5b2f7596) 下载最新的 `.zip` 压缩包。
+如果你只想运行程序，请直接前往 [Releases 页面](https://github.com/jpdsg/NJUPT_library_management_system/releases) 下载最新的 `.zip` 压缩包。
 1. 解压压缩包。
 2. 确保文件夹内包含 `.exe` 及所有依赖的 `.dll` 文件。
 3. 双击运行 `njupt_library_management.exe`。
